@@ -6346,10 +6346,10 @@ var OzPlayer = (function()
             {
                 //then define an abstraction for the button's command handler
                 //so we can call it programatically (eg. from the global key handler)
-                '.command'  : function()
+                '.ozcommand'  : function()
                 {
                     //*** DEV TMP
-                    //if(__.console) { console.log('player.controlform.rewind.command()'); }
+                    //if(__.console) { console.log('player.controlform.rewind.ozcommand()'); }
 
                     //get the media's currentTime and subtract the config seek duration
                     //then pass the new value straight to setMediaTime
@@ -6420,10 +6420,10 @@ var OzPlayer = (function()
             {
                 //then define an abstraction for the button's command handler
                 //so we can call it programatically (eg. from the global key handler)
-                '.command'  : function()
+                '.ozcommand'  : function()
                 {
                     //*** DEV TMP
-                    //if(__.console) { console.log('player.controlform.forward.command()'); }
+                    //if(__.console) { console.log('player.controlform.forward.ozcommand()'); }
 
                     //get the media's currentTime and add the config seek duration
                     //then pass the new value straight to setMediaTime
@@ -6548,10 +6548,10 @@ var OzPlayer = (function()
             {
                 //then define an abstraction for the button's command handler
                 //so we can call it programatically (eg. from the global key handler)
-                '.command'  : function()
+                '.ozcommand'  : function()
                 {
                     //*** DEV TMP
-                    //if(__.console) { console.log('player.controlform.playpause.command()'); }
+                    //if(__.console) { console.log('player.controlform.playpause.ozcommand()'); }
 
                     //reset the keyclick flag, which is used for the global keyboard shortcuts
                     //see the global keydown and keyup listeners for notes about this
@@ -6813,7 +6813,7 @@ var OzPlayer = (function()
                     },
 
                     //then define an abstraction for the button's command handler
-                    '.command'  : function()
+                    '.ozcommand'  : function()
                     {
                         //reset the keyclick flag
                         player.keyclick = false;
@@ -7212,7 +7212,7 @@ var OzPlayer = (function()
                             },
 
                             //define an abstraction for the menu item command handler
-                            '.command'  : function(menu, srclang, etype)
+                            '.ozcommand'  : function(menu, srclang, etype)
                             {
                                 //if the menu is disabled, just ignore this
                                 if(menu.__disabled)
@@ -7381,10 +7381,10 @@ var OzPlayer = (function()
                 onstate,
                 {
                     //then define an abstraction for the button's command handler
-                    '.command'  : function()
+                    '.ozcommand'  : function()
                     {
                         //*** DEV TMP
-                        //if(__.console) { console.log('player.controlform.ad.command()'); }
+                        //if(__.console) { console.log('player.controlform.ad.ozcommand()'); }
 
                         //reset the keyclick flag
                         player.keyclick = false;
@@ -7556,7 +7556,7 @@ var OzPlayer = (function()
                 (player.media.muted ? 'on' : 'off'),
                 {
                     //then define an abstraction for the button's command handler
-                    '.command'  : function()
+                    '.ozcommand'  : function()
                     {
                         //reset the keyclick flag
                         player.keyclick = false;
@@ -7679,10 +7679,10 @@ var OzPlayer = (function()
             {
                 //then define an abstraction for the button's command handler
                 //so we can call it programatically (eg. from the global key handler)
-                '.command'  : function()
+                '.ozcommand'  : function()
                 {
                     //*** DEV TMP
-                    //if(__.console) { console.log('player.controlform.pin.command()'); }
+                    //if(__.console) { console.log('player.controlform.pin.ozcommand()'); }
 
                     //invert the current pinned state, then if we're setting it to true
                     //add the container pinned class, otherwise remove the class
@@ -8145,7 +8145,7 @@ var OzPlayer = (function()
                     },
 
                     //then define an abstraction for the button's command handler
-                    '.command'      : function(e)
+                    '.ozcommand'      : function(e)
                     {
                         //reset the keyclick flag
                         player.keyclick = false;
@@ -8435,7 +8435,7 @@ var OzPlayer = (function()
                                     player.tracks.captions.enabled = srclang == 'off';
 
                                     //then call cc command to invert that enabled state
-                                    player.controlform.cc.command();
+                                    player.controlform.cc.ozcommand();
                                 }
                             });
                         });
@@ -9151,7 +9151,7 @@ var OzPlayer = (function()
         {
             if(screentype !== null)
             {
-                player.controlform.fullscreen.command(e);
+                player.controlform.fullscreen.ozcommand(e);
             }
             return null;
         });
@@ -10754,7 +10754,7 @@ var OzPlayer = (function()
             //player.konsole.innerHTML = '["' + key + '"] click > FIRE COMMAND' + '<br>' + player.konsole.innerHTML;
 
             //[else] call and return the command function
-            return player.controlform[key].command();
+            return player.controlform[key].ozcommand();
         });
 
         //bind an Enter keyup event to reset the flag to null
@@ -10791,7 +10791,7 @@ var OzPlayer = (function()
                     maybeRemoveButtonTooltip(player.controlform);
 
                     //call the command function
-                    player.controlform[key].command();
+                    player.controlform[key].ozcommand();
 
                     //return false to prevent default
                     //* maybe command should return false
@@ -10908,7 +10908,7 @@ var OzPlayer = (function()
             }
             if(e.keyCode == 13 && thetarget.getAttribute('aria-checked') !== null)
             {
-                menu.command(menu, thetarget.getAttribute('data-srclang'), e.type);
+                menu.ozcommand(menu, thetarget.getAttribute('data-srclang'), e.type);
                 return false;
             }
         });
@@ -10926,7 +10926,7 @@ var OzPlayer = (function()
             if(thetarget.type == 'radio')
             {
                 thetarget.parentNode.focus();
-                menu.command(menu, thetarget.value, e.type);
+                menu.ozcommand(menu, thetarget.value, e.type);
             }
         });
 
@@ -10936,7 +10936,7 @@ var OzPlayer = (function()
         {
             if(etc.button(e) == 1 && thetarget.getAttribute('aria-checked') !== null)
             {
-                menu.command(menu, thetarget.getAttribute('data-srclang'), e.type);
+                menu.ozcommand(menu, thetarget.getAttribute('data-srclang'), e.type);
                 return false;
             }
         });
@@ -11512,7 +11512,7 @@ var OzPlayer = (function()
                 }
 
                 //then call the playpause button's command handler
-                return player.controlform.playpause.command();
+                return player.controlform.playpause.ozcommand();
             });
 
             //then bind a media play event to remove the poster again

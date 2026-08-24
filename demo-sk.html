@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="sk">
+<head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>OzPlayer — slovenské demo</title>
+
+    <style type="text/css">
+
+        html, body
+        {
+            margin:0;
+            padding:0;
+            font:normal normal normal 100%/1.4 verdana, sans-serif;
+            background:#fff;
+            color:#000;
+        }
+        body
+        {
+            padding:20px;
+        }
+        h1
+        {
+            font-size:1.3em;
+        }
+        p.intro
+        {
+            max-width:640px;
+        }
+        figure
+        {
+            display:table;
+            width:1%;
+            margin:0 auto;
+        }
+
+    </style>
+
+    <!-- html5 figure shim (for older browsers) -->
+    <script type="text/javascript">
+    (function()
+    {
+        for(var tags = ['figure','figcaption'], i = 0; i < tags.length; i ++)
+        {
+            document.createElement(tags[i]);
+        }
+    })();
+    </script>
+
+    <!-- MediaElement library (must be in the head) -->
+    <script src="./ozplayer-core/mediaelement.min.js" type="text/javascript"></script>
+
+    <!-- MediaElement renderers (YouTube / Vimeo / Facebook sources) -->
+    <script src="./ozplayer-core/facebook.min.js" type="text/javascript"></script>
+    <script src="./ozplayer-core/vimeo.min.js" type="text/javascript"></script>
+
+    <!-- required player + required highlights (order matters: player, then highlights) -->
+    <link rel="stylesheet" href="./ozplayer-core/ozplayer.css" media="all" type="text/css" />
+    <link rel="stylesheet" href="./ozplayer-skin/highlights-pink.css" media="all" type="text/css" />
+
+    <!-- sample transcript styles -->
+    <link rel="stylesheet" href="transcript.css" media="all" type="text/css" />
+
+</head>
+<body>
+
+    <h1>OzPlayer — slovenské demo (sk)</h1>
+    <p class="intro">
+        Táto stránka ukazuje OzPlayer s pripojeným slovenským prekladom rozhrania
+        (<code>ozplayer-lang/sk.js</code>) — tlačidlá, popisky, ponuka titulkov aj prepis
+        sú po slovensky. Video obsahuje slovenské aj anglické titulky, medzi ktorými
+        možno prepínať v ponuke titulkov (CC).
+    </p>
+
+    <figure id="demo-figure">
+
+        <!-- player markup -->
+        <div
+            id="demo" class="ozplayer"
+            data-transcript="demo-transcript"
+            data-controls="row"
+            >
+
+            <video
+                preload="none"
+                controls="controls"
+                playsinline="playsinline"
+                width="640" height="360"
+                poster="./media/posters/ozplayer.png"
+                >
+
+                <source src="./media/videos/ozplayer.webm" type="video/webm" />
+                <source src="./media/videos/ozplayer.mp4" type="video/mp4" />
+
+                <track src="./media/captions/sk/ozplayer.vtt" kind="captions" srclang="sk" label="Slovenčina" default="default" />
+                <track src="./media/captions/en/ozplayer.vtt" kind="captions" srclang="en" label="English" />
+
+                <track src="./media/transcripts/sk/ozplayer-transcript.vtt" kind="metadata" data-kind="transcript" srclang="sk" />
+                <track src="./media/transcripts/en/ozplayer-transcript.vtt" kind="metadata" data-kind="transcript" srclang="en" />
+
+                <!-- static fallback content when JS/HTML5 video is unavailable -->
+                <div class="ozplayer-fallback">
+                    <ul>
+                        <li><a href="./media/videos/ozplayer.mp4">O OzPlayeri (MP4)</a></li>
+                        <li><a href="./media/videos/ozplayer.webm">O OzPlayeri (WebM)</a></li>
+                        <li><a href="./media/captions/sk/ozplayer.vtt">Slovenské titulky</a></li>
+                    </ul>
+                </div>
+
+            </video>
+
+            <!-- audio description track -->
+            <audio data-default="default" preload="none">
+                <source src="./media/descriptions/ozplayer.mp3" type="audio/mp3" />
+                <source src="./media/descriptions/ozplayer.ogg" type="audio/ogg" />
+            </audio>
+
+        </div>
+
+        <!-- transcript expander -->
+        <details class="ozplayer-expander" open="open">
+            <summary>Prepis videa</summary>
+            <div id="demo-transcript" class="ozplayer-transcript"></div>
+        </details>
+
+    </figure>
+
+    <!-- required player + optional lang + required configuration
+         (order matters: core, then lang, then configuration) -->
+    <script src="./ozplayer-core/ozplayer.js" type="text/javascript"></script>
+    <script src="./ozplayer-lang/sk.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    (function()
+    {
+        //universal player configuration
+        OzPlayer.define("default-volume",    0.7);
+        OzPlayer.define("default-width",     400);
+        OzPlayer.define("default-height",    225);
+        OzPlayer.define("auto-hiding-delay", 4);
+        OzPlayer.define("allow-fullscreen",  true);
+        OzPlayer.define("seek-duration",     15);
+
+        //initialise the video player
+        new OzPlayer.Video("demo");
+
+    })();
+    </script>
+
+</body>
+</html>

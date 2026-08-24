@@ -40,3 +40,12 @@ Following is the original README.md:
 * `test.php` is a test page for the standard video player
 * `transcript-cue.png` is the transcript cue marker image for the **latest version**
 * `transcript.css` is the source version of the transcript sylesheet for the **latest version**
+* `demo-sk.html` is a standalone Slovak-language demo page (no PHP required) — see `changelogs/OzPlayer-4.2-changelog.md` for details
+
+## Slovak (sk) Translation
+
+Contributed by Radoslav Ďurač ([@rraddatch](https://github.com/rraddatch)) — see [`CONTRIBUTORS.md`](CONTRIBUTORS.md).
+
+`ozplayer-lang/sk.js` provides a full Slovak UI translation (buttons, tooltips, menus, transcript strings). To use it in your own page, swap `ozplayer-lang/en.js` for `ozplayer-lang/sk.js` and set `<html lang="sk">`. `demo-sk.html` shows a complete working example, including Slovak captions/transcript for the bundled "About OzPlayer" video.
+
+> **Note:** `ozplayer-core/ozplayer.js` includes a fix for a click-handler collision with the native `HTMLButtonElement.command` property that recent Chromium versions (Chrome/Edge) introduced via the Invoker Commands API — without it, no control buttons respond to clicks in those browsers. See `changelogs/OzPlayer-4.2-changelog.md` for the full explanation.
