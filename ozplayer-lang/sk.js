@@ -8,6 +8,7 @@
  * License: MIT
  *
  * Slovak (sk) translation
+ * Translated by Radoslav Ďurač (https://github.com/rraddatch)
  *
  */
 (function(){var lang={

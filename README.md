@@ -44,7 +44,7 @@ Following is the original README.md:
 
 ## Slovak (sk) Translation
 
-Contributed by Radoslav Ďurač ([@rraddatch](https://github.com/rraddatch)).
+Contributed by Radoslav Ďurač ([@rraddatch](https://github.com/rraddatch)) — see [`CONTRIBUTORS.md`](CONTRIBUTORS.md).
 
 `ozplayer-lang/sk.js` provides a full Slovak UI translation (buttons, tooltips, menus, transcript strings). To use it in your own page, swap `ozplayer-lang/en.js` for `ozplayer-lang/sk.js` and set `<html lang="sk">`. `demo-sk.html` shows a complete working example, including Slovak captions/transcript for the bundled "About OzPlayer" video.
 
