@@ -1,0 +1,213 @@
+WEBVTT
+
+1
+00:00:05.810 --> 00:00:09.460
+Gian: Dobrý deň, volám sa Gian Wild a som riaditeľkou AccessibilityOz.
+
+2
+00:00:09.460 --> 00:00:14.200
+Pôsobíme už dva roky a dnes by som vám rada predstavila
+
+3
+00:00:14.200 --> 00:00:17.000
+prvý prístupný videoprehrávač na svete – OzPlayer.
+
+4
+00:00:22.000 --> 00:00:27.179
+Prístupnosť webu znamená sprístupniť webové stránky a aplikácie ľuďom so zdravotným postihnutím.
+
+5
+00:00:27.179 --> 00:00:33.660
+Pri online videách ide najmä o nepočujúcich ľudí, ľudí
+
+6
+00:00:33.660 --> 00:00:38.910
+nevidiacich alebo zrakovo postihnutých, ako aj o ľudí s telesným alebo
+
+7
+00:00:38.910 --> 00:00:45.000
+kognitívnym postihnutím. Preto sme vyvinuli OzPlayer tak, aby pokryl potreby všetkých ľudí so zdravotným postihnutím.
+
+8
+00:00:52.000 --> 00:00:56.300
+Za posledný rok sme otestovali vyše 100 webových stránok a približne osemdesiat percent
+
+9
+00:00:56.300 --> 00:01:02.200
+z nich malo nejaký videoprehrávač. Úplne každý testovaný videoprehrávač
+
+10
+00:01:02.200 --> 00:01:07.430
+bol v niečom neprístupný. Niektoré obsahovali klávesové pasce, iné sa nedali
+
+11
+00:01:07.430 --> 00:01:13.240
+ovládať klávesnicou, ďalšie sa dali čiastočne ovládať klávesnicou, no dôležité funkcie
+
+12
+00:01:13.240 --> 00:01:17.640
+ako titulky a zvukový komentár sa klávesnicou aktivovať nedali. Boli tam aj ďalšie
+
+13
+00:01:17.640 --> 00:01:23.359
+problémy, napríklad automatické spúšťanie videí a absencia zvukových komentárov a titulkov.
+
+14
+00:01:23.359 --> 00:01:29.130
+Naši klienti sa nás preto stále pýtali, aký videoprehrávač majú použiť, a tak sme sa rozhodli,
+
+15
+00:01:29.130 --> 00:01:33.130
+že si vlastný vytvoríme sami, aby sme túto potrebu naplnili.
+
+16
+00:01:43.199 --> 00:01:49.990
+Niektoré videá obsahujú klávesové pasce a ide o známu chybu funkcií Flash vo Firefoxe.
+
+17
+00:01:49.990 --> 00:01:54.909
+Keď video obsahuje klávesovú pascu, používateľ musí v podstate
+
+18
+00:01:54.909 --> 00:02:00.209
+úplne zatvoriť okno prehliadača a začať odznova, čím sa obsah stáva
+
+19
+00:02:00.209 --> 00:02:02.000
+pre používateľa úplne neprístupným.
+
+20
+00:02:07.500 --> 00:02:12.370
+Keď je video neprístupné klávesnicou, používatelia s telesným postihnutím,
+
+21
+00:02:12.370 --> 00:02:18.230
+napríklad s Parkinsonovou chorobou, sa k obsahu videa nedostanú. V mnohých prehrávačoch sme zistili,
+
+22
+00:02:18.230 --> 00:02:23.890
+že ovládanie ako prehrávanie a pozastavenie sa dalo aktivovať klávesnicou, no iné
+
+23
+00:02:23.890 --> 00:02:29.220
+ovládacie prvky, napríklad hlasitosť alebo zapnutie titulkov či zvukového komentára, sa klávesnicou
+
+24
+00:02:29.220 --> 00:02:34.000
+aktivovať nedali, čím sa tieto prehrávače stali neprístupnými.
+
+25
+00:02:39.500 --> 00:02:44.730
+Keď sa videá spúšťajú automaticky, môže to koncového používateľa výrazne dezorientovať.
+
+26
+00:02:44.730 --> 00:02:50.439
+Ide o situáciu, keď sa video spustí hneď po otvorení stránky, čo môže byť obzvlášť
+
+27
+00:02:50.439 --> 00:02:56.299
+problematické pre používateľov čítačiek obrazovky. Tým sa obsah stránky
+
+28
+00:02:56.299 --> 00:03:00.799
+prečíta nahlas, a ak si viete predstaviť, že sa video spustí hneď po načítaní
+
+29
+00:03:00.799 --> 00:03:05.689
+stránky, používateľ čítačky obrazovky potom nepočuje obsah svojej
+
+30
+00:03:05.689 --> 00:03:10.500
+čítačky a nedokáže sa po stránke pohybovať – dokonca ani natoľko, aby to
+
+31
+00:03:10.500 --> 00:03:17.500
+video vypol. Automatické spúšťanie, ktoré využíva napríklad YouTube, je preto vážny problém prístupnosti.
+
+32
+00:03:24.390 --> 00:03:29.310
+OzPlayer je plne ovládateľný klávesnicou. Titulky môžete zapínať a vypínať, môžete posúvať
+
+33
+00:03:29.310 --> 00:03:35.909
+posuvníky nahor a nadol, hlasitosť môžete meniť výlučne pomocou klávesnice. Máme tiež
+
+34
+00:03:35.909 --> 00:03:40.739
+jedinečnú funkciu preskakovacích odkazov nad videom, ktoré používateľom umožňujú preskočiť priamo
+
+35
+00:03:40.739 --> 00:03:47.099
+na prepis alebo úplne preskočiť video. Máme natívne klávesové ovládanie a jednou z
+
+36
+00:03:47.099 --> 00:03:52.829
+vecí, ktoré sú v OzPlayeri jedinečné, je použitie HTML5. Použili sme viacero
+
+37
+00:03:52.829 --> 00:03:58.049
+funkcií HTML5, napríklad prvky VIDEO a AUDIO. Niektoré funkcie sme
+
+38
+00:03:58.049 --> 00:04:03.560
+zámerne nepoužili, napríklad natívne API Text Track, pretože nie je príliš dobre podporované, ale
+
+39
+00:04:03.560 --> 00:04:07.500
+s tým, ako sa prehliadače vyvíjajú, ich samozrejme zapracujeme.
+
+40
+00:04:12.849 --> 00:04:18.130
+Videoobsah sa, samozrejme, dá urobiť neprístupným už pri jeho vzniku. Blikajúci alebo
+
+41
+00:04:18.130 --> 00:04:23.100
+problikávajúci obsah môže u niektorých ľudí vyvolať epilepsiu alebo migrénu. V skutočnosti
+
+42
+00:04:23.100 --> 00:04:29.360
+som sama pri sledovaní niektorých videí dostala migrénu. Existujú aj ďalšie problémy, napríklad
+
+43
+00:04:29.360 --> 00:04:34.300
+farebný kontrast a použitie farieb. No najdôležitejšie sú, samozrejme,
+
+44
+00:04:34.300 --> 00:04:38.979
+titulky a zvukový komentár. Je absolútne nevyhnutné, aby všetky vytvárané videá
+
+45
+00:04:38.979 --> 00:04:44.470
+mali titulky a zvukový komentár. Textový prepis,
+
+46
+00:04:44.470 --> 00:04:50.710
+hoci ho WCAG2 výslovne nevyžaduje, je tiež absolútne nevyhnutnou súčasťou
+
+47
+00:04:50.710 --> 00:04:53.850
+prístupnosti akéhokoľvek videa.
+
+48
+00:04:59.000 --> 00:05:03.069
+Sme na OzPlayer naozaj hrdí, no, samozrejme, pracujeme na nových funkciách pre
+
+49
+00:05:03.069 --> 00:05:09.599
+ďalšiu verziu. Medzi tieto funkcie patria interaktívne mediálne prvky, podpora posunkovej reči a
+
+50
+00:05:09.599 --> 00:05:11.599
+rozšírený zvukový komentár.
+
+51
+00:05:17.449 --> 00:05:22.590
+V AccessibilityOz neustále zlepšujeme a radi by sme náš videoprehrávač vylepšili
+
+52
+00:05:22.590 --> 00:05:26.990
+pre všetkých používateľov. Ak si teda želáte niečo konkrétne v ďalšej verzii OzPlayera,
+
+53
+00:05:26.990 --> 00:05:28.100
+dajte nám, prosím, vedieť.
